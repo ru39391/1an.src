@@ -2,39 +2,65 @@ header.header
   .header__wrapper
     .header__col.header__col_type_logo
       a.logo(href="/")
+        +icon('logo')
     nav.header__col.header__col_type_nav
       ul.nav
         li.nav__item
-          a.nav__link(href="#") Пункт 1
+          button.nav__link.nav__link_type_category(type="button")
+            | Пункт 1
+            +icon('arrow-down','nav__link-arrow')
           .nav__dropdown
             .nav__dropdown-inner
-              a.nav__dropdown-col(href="#")
+              a.nav__dropdown-link(href="#")
                 span.nav__icon
+                  +icon('furniture')
                 span.nav__desc
                   span.nav__desc-title Меню 1
                   span.nav__desc-text Покупайте и продавайте
-              a.nav__dropdown-col(href="#")
+              a.nav__dropdown-link(href="#")
                 span.nav__icon
+                  +icon('furniture')
                 span.nav__desc
                   span.nav__desc-title Меню 2
                   span.nav__desc-text Покупайте и продавайте
-              a.nav__dropdown-col(href="#")
+              a.nav__dropdown-link(href="#")
                 span.nav__icon
+                  +icon('furniture')
                 span.nav__desc
                   span.nav__desc-title Меню 1
                   span.nav__desc-text Покупайте и продавайте
-              a.nav__dropdown-col(href="#")
+              a.nav__dropdown-link(href="#")
                 span.nav__icon
+                  +icon('furniture')
                 span.nav__desc
                   span.nav__desc-title Меню 2
                   span.nav__desc-text Покупайте и продавайте
         li.nav__item
-          a.nav__link(href="#") Пункт 2
+          button.nav__link.nav__link_type_category(type="button")
+            | Пункт 2
+            +icon('arrow-down','nav__link-arrow')
+          .nav__dropdown
+            .nav__dropdown-inner
+              a.nav__dropdown-link(href="#")
+                span.nav__icon
+                  +icon('furniture')
+                span.nav__desc
+                  span.nav__desc-title Меню 2
+                  span.nav__desc-text Покупайте и продавайте
+              a.nav__dropdown-link(href="#")
+                span.nav__icon
+                  +icon('furniture')
+                span.nav__desc
+                  span.nav__desc-title Меню 2
+                  span.nav__desc-text Покупайте и продавайте
         li.nav__item
           a.nav__link(href="#") Пункт 3
         li.nav__item
-          a.nav__link(href="#") Пункт 4
+          a.nav__link.nav__link_active(href="#") Пункт 4
         li.nav__item
           a.nav__link(href="#") Пункт 5
     .header__col.header__col_type_aside
-      button.btn(type="button")
+      button.btn(type="button") Кнопка
+      button.nav-toggler(type="button")
+        +icon('menu','nav-toggler__show icon-fluid')
+        +icon('close','nav-toggler__close icon-fluid')

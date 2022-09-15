@@ -1,0 +1,8 @@
+.logo {
+  @include wh(75px,40px);
+  @include inline-block;
+
+  @media (max-width:$breakpoint_md) {
+    @include wh(58px,32px);
+  }
+}

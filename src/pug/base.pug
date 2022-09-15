@@ -15,13 +15,14 @@ html(lang="ru")
 
     //- link(href="../img/favicon.ico" rel="shortcut icon")
 
-  body
+  body.page
     block header
       include base/header.pug
 
-    block promo
+    .page__wrapper
+      block promo
 
-    block wrapper
+      block wrapper
 
     block footer
       include base/footer.pug

@@ -20,7 +20,10 @@ $color_border: $color_gray_light;
 
 $breakpoint_xl: 1600px;
 $breakpoint_lg: 1280px;
-$breakpoint_md: 768px;
+$breakpoint_md: 1024px;
+$breakpoint_sm: 768px;
+
+$grid_gutter: 15px;
 
 $font_params: (
   "h1": (
