@@ -1,3 +1,10 @@
+@each $index, $params in $font_params {
+  .#{$index},
+  #{$index} {
+    @include setfonts(nth(nth(nth($params,1), 2), 1), nth(nth(nth($params,2), 2), 1), nth(nth(nth($params,3), 2), 1), nth(nth(nth($params,1), 2), 2), nth(nth(nth($params,2), 2), 2), nth(nth(nth($params,3), 2), 2), nth(nth($params,4),2));
+  }
+}
+
 .tdec-none {
   text-decoration: none;
 

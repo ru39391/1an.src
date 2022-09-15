@@ -1,15 +1,56 @@
-$font-family__default: 'Artegra Sans', Arial, sans-serif;
-$font-family__extended: $font-family__default;
-$font-family__title: $font-family__default;
-$font-family__alter: $font-family__default;
-$font-size__default: 16px;
+$font_family_default: 'Formular', Arial, sans-serif;
+$font_family_extended: $font_family_default;
+$font_family_title: $font_family_default;
+$font_family_alter: $font_family_default;
 
-$line-height__default: 1;
-$line-height__content: 1.4;
+$font_size_default: 14px;
 
-$color__default: #000;
+$line_height_default: 1;
+$line_height_content: 1.4;
 
-$color__link: $color__default;
-$color__link_hover: $color__default;
+$color_black_light: #2C2E3E;
+$color_black_dark: #1E2030;
+$color_gray_light: #8F95AC;
+$color_red: #FF2D23;
 
-$color__border: $color__default;
+$color_default: $color_black_light;
+$color_link: $color_black_light;
+$color_link_hover: $color_black_light;
+$color_border: $color_gray_light;
+
+$breakpoint_xl: 1600px;
+$breakpoint_lg: 1280px;
+$breakpoint_md: 768px;
+
+$font_params: (
+  "h1": (
+    "xl":(48,55),
+    "lg":(42,50),
+    "md":(30,35),
+    "fw": (bold)
+  ),
+  "h2": (
+    "xl":(35,40),
+    "lg":(30,35),
+    "md":(26,33),
+    "fw": (bold)
+  ),
+  "h3": (
+    "xl":(25,30),
+    "lg":(20,26),
+    "md":(18,22),
+    "fw": (bold)
+  ),
+  "h4": (
+    "xl":(16,20),
+    "lg":(14,17),
+    "md":(14,18),
+    "fw": (bold)
+  ),
+  "h5": (
+    "xl":(20,34),
+    "lg":(18,26),
+    "md":(15,22),
+    "fw": (300)
+  )
+);

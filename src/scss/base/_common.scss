@@ -5,18 +5,16 @@
 }
 
 body {
-  font: $font-size__default $font-family__default;
-  line-height: $line-height__default;
-  color: $color__default;
+  font: $font_size_default $font_family_default;
+  line-height: $line_height_default;
+  color: $color_default;
 }
 
-h1 {
-  @extend %title-default;
-  word-wrap: break-word;
-}
-
-p {
-  @extend %text-default;
+@for $i from 1 to 6 {
+  .h#{$i},
+  h#{$i} {
+    margin-bottom: 0;
+  }
 }
 
 a {
