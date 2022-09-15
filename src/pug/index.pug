@@ -29,3 +29,71 @@ block promo
       .promo__col.promo__col_type_aside
 
 block wrapper
+  section.section
+    .wrapper
+      h2.section__title Обычный слайдер
+      .scroller
+        .scroller__wrapper
+          .scroller__slide
+            .scroller__meta
+              .rating
+                .rating__item
+                .rating__item
+                .rating__item
+                .rating__item
+                .rating__item
+          .scroller__slide
+            .scroller__meta
+              .rating
+                .rating__item
+                .rating__item
+                .rating__item
+                .rating__item
+                .rating__item
+          .scroller__slide
+            .scroller__meta
+              .rating
+                .rating__item
+                .rating__item
+                .rating__item
+                .rating__item
+                .rating__item
+          .scroller__slide
+            .scroller__meta
+              .rating
+                .rating__item
+                .rating__item
+                .rating__item
+                .rating__item
+                .rating__item
+        .scroller-nav
+          button.scroller-nav__btn.scroller-nav__btn_dir_prev(type="button")
+          button.scroller-nav__btn.scroller-nav__btn_dir_next(type="button")
+        .scroller-pagination
+          button.scroller-pagination__item(type="button")
+          button.scroller-pagination__item(type="button")
+          button.scroller-pagination__item(type="button")
+          button.scroller-pagination__item(type="button")
+
+  .divider.section.wrapper
+    .divider__col.divider__col_type_aside
+      .progressbar
+        .progressbar__row
+          .progressbar__runner 5 %
+        .progressbar__footer
+          button.progressbar__btn.btn(type="button") + 25 %
+          .progressbar__desc При нажатии на кнопку прогрессбар заполняется на столько процентов, сколько указано на кнопке
+    .divider__col.divider__col_type_content
+      .content
+        .content__expanded
+          p Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака.
+          button.content__expander(type="button") Подробнее
+
+  .section.wrapper
+
+  - var features = [{value:'3,000',title:'Агенств'},{value:'10,000',title:'Партнеров'},{value:'80,000',title:'Квартир в базе'},{value:'100+',title:'Застройщиков'},{value:'200',title:'Сотрудников'}]
+  .features.section.wrapper
+    each feature in features
+      .features__item
+        .features__item-value!= feature.value
+        .features__item-title!= feature.title
