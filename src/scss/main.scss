@@ -1,10 +1,4 @@
 @import '~bootstrap/scss/bootstrap-reboot.scss';
-@import '~bootstrap/scss/bootstrap-grid.scss';
-//@import '~bootstrap/scss/modal';
-@import '~bootstrap/scss/images';
-@import '~bootstrap/scss/utilities/text';
-//@import '~bootstrap/scss/utilities/embed';
-//@import '~bootstrap/scss/utilities/display';
 
 /* base */
 @import 'base/fonts';
@@ -12,6 +6,14 @@
 @import 'base/mixins';
 @import 'base/extends';
 @import 'base/common';
+
+@import 'base/bg';
+@import 'base/color';
+@import 'base/img';
+@import 'base/text';
+@import 'base/width';
+@import 'base/height';
+@import 'base/mixes';
 
 /* tpl */
 @import 'tpl/btn';

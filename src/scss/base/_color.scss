@@ -1,0 +1,7 @@
+.color-inherit {
+  @include color(inherit !important);
+}
+
+.color-white {
+  @include color(#fff !important);
+}
