@@ -1,6 +1,7 @@
 %wrapper {
-  max-width: 1600px;
+  max-width: 1200px;
   @include mx(auto);
+  @include px(16px);
 }
 
 %d-flex-wrap {

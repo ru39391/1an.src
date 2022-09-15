@@ -1,7 +1,6 @@
 include libs/mixins
 
 block meta
-  - var pageClass = '';
   - var title = 'Базовый шаблон';
 
 doctype html
@@ -16,12 +15,13 @@ html(lang="ru")
 
     //- link(href="../img/favicon.ico" rel="shortcut icon")
 
-  body(class=pageClass)
+  body
     block header
       include base/header.pug
 
+    block promo
+
     block wrapper
-      section.wrapper
 
     block footer
       include base/footer.pug

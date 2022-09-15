@@ -1,12 +1,31 @@
 extends base
 
 block meta
-  - var pageClass = 'main-page';
   - var title = 'Главная';
 
+block promo
+  section.promo
+    .promo__wrapper.wrapper
+      .promo__col.promo__col_type_main
+        h1.promo__title Недвижимость Санкт-Петербурга и Москвы
+        form.form(action="#" method="post" id="promoform")
+          .form__item
+            label.form__label Выбрать город
+            select.form__select
+              option(disabled) Выбрать город
+              option Москва
+              option Санкт-Петербург
+              option Владивосток
+              option Оренбург
+          .form__item
+            label.form__label Ваш e-mail
+            input.form__field(type="email" value="" placeholder="info@mail.ru")
+          .form__item.form__item_width_wide
+            button.btn(type="submit") Кнопка действия
+          .form__footer
+            input.toggler.toggler_type_checkbox(type="checkbox" id="promoform__policy" checked)
+            label.form__label(for="promoform__policy") Отправляя нам данную форму вы соглашаетесь с
+              a(href="#") &nbsp;политикой конфиденциальности
+      .promo__col.promo__col_type_aside
+
 block wrapper
-  h1 H1 — заголовок
-  h2 H1 — заголовок
-  h3 H1 — заголовок
-  h4 H1 — заголовок
-  h5 H1 — заголовок
