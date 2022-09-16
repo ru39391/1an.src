@@ -1,0 +1,28 @@
+.map {
+  height: 506px;
+
+  @media (max-width:$breakpoint_lg) {
+    height: 414px;
+  }
+}
+
+.map__title {
+  @include fs-lh(16px,20/16);
+  font-weight: 700;
+  display: block;
+  margin: 0 0 10px;
+}
+
+.map__desc {
+  @include fs-lh(14px,18/14);
+  display: block;
+  margin: 0 0 10px;
+}
+
+.map__link {
+  @include inline-block;
+  @include fs-lh(14px,18/14);
+  color: $color_red;
+  text-decoration: underline;
+  margin: 0 0 16px;
+}
