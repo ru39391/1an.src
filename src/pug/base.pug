@@ -26,3 +26,14 @@ html(lang="ru")
 
     block footer
       include base/footer.pug
+
+    template.selecter-template
+      .selecter
+        button.selecter__placeholder(type="button")
+          span.selecter__title
+          +icon('arrow-down','selecter__arrow')
+        //- .selecter__list
+          button.selecter__option(type="button") Москва
+          button.selecter__option(type="button") Санкт-Петербург
+          button.selecter__option(type="button") Владивосток
+          button.selecter__option(type="button") Оренбург

@@ -1,0 +1,105 @@
+.form {
+  @extend %d-flex-wrap;
+  @include mx(-$grid_gutter);
+
+  @media (max-width:$breakpoint_lg) {
+    @include mx(-10px);
+  }
+}
+
+.form__item {
+  @include fw(100%/2);
+  @include px($grid_gutter);
+  margin: 0 0 40px;
+
+  @media (max-width:$breakpoint_lg) {
+    @include px(10px);
+  }
+
+  @media (max-width:$breakpoint_md) {
+    @include fw(100%);
+    margin: 0 0 24px;
+  }
+
+  &.form__item_width_wide {
+    @include fw(100%);
+  }
+}
+
+.form__label {
+  @include fs-lh(14px,25/14);
+  display: block;
+  margin: 0 0 6px;
+  color: $color_gray_light;
+
+  &.form__label_type_toggler {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+  }
+}
+
+.form__label-link {
+  @include color($color_red !important);
+  display: block;
+}
+
+.form__field {
+  @include wh(100%,60px);
+  padding: 20px 24px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: $color_black_dark;
+  border: 1px solid rgba(143, 149, 172, .4);
+}
+
+.form__footer {
+  @include fw(100%/6*4);
+  @include px($grid_gutter);
+
+  @media (max-width:$breakpoint_lg) {
+    @include px(10px);
+  }
+
+  @media (max-width:$breakpoint_md) {
+    @include fw(100%);
+  }
+}
+
+.form__btn {
+  height: 60px;
+}
+
+.form__toggler {
+  display: none;
+
+  &:checked + .form__label_type_toggler {
+    .form__toggler-holder {
+      opacity: 1;
+      border-color: $color_red;
+      background-color: $color_red;
+    }
+
+    .form__toggler-icon {
+      opacity: 1;
+    }
+  }
+}
+
+.form__toggler-holder {
+  @extend %d-flex-column;
+  @extend %d-flex-centered;
+  @include wh(18px);
+  @include fw(18px);
+  @include border(1px,$color_border);
+  margin: 0 18px 0 0;
+  opacity: .2;
+  color: #fff;
+  border-radius: 2px;
+}
+
+.form__toggler-icon {
+  @include fw(12px);
+  @include wh(12px,10px);
+  opacity: 0;
+}

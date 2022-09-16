@@ -5,3 +5,7 @@
 .color-white {
   @include color(#fff !important);
 }
+
+.color-red {
+  @include color($color_red !important);
+}

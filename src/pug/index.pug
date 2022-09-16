@@ -4,10 +4,12 @@ block meta
   - var title = 'Главная';
 
 block promo
-  section#promo.promo
+  section.promo
     .promo__wrapper.wrapper
       .promo__col.promo__col_type_main
-        h1.promo__title Недвижимость Санкт-Петербурга и Москвы
+        h1.promo__title Недвижимость
+          span.promo__title-inner Санкт-Петербурга
+          | и Москвы
         form.form(action="#" method="post" id="promoform")
           .form__item
             label.form__label Выбрать город
@@ -19,14 +21,18 @@ block promo
               option Оренбург
           .form__item
             label.form__label Ваш e-mail
-            input.form__field(type="email" value="" placeholder="info@mail.ru")
+            input.form__field.form__field_theme_dark(type="email" value="" placeholder="info@mail.ru")
           .form__item.form__item_width_wide
-            button.btn(type="submit") Кнопка действия
+            button.form__btn.btn(type="submit") Кнопка действия
           .form__footer
-            input.toggler.toggler_type_checkbox(type="checkbox" id="promoform__policy" checked)
-            label.form__label(for="promoform__policy") Отправляя нам данную форму вы соглашаетесь с
-              a(href="#") &nbsp;политикой конфиденциальности
+            input.form__toggler(type="checkbox" id="promoform__policy" checked)
+            label.form__label.form__label_type_toggler(for="promoform__policy")
+              span.form__toggler-holder.form__toggler-holder_type_checkbox
+                +icon('checked','form__toggler-icon')
+              span Отправляя нам данную форму вы соглашаетесь с
+                a.form__label-link(href="#") политикой конфиденциальности
       .promo__col.promo__col_type_aside
+        +image('promo.png')
 
 block wrapper
   section.section
