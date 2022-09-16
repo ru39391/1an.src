@@ -23,3 +23,15 @@ navTogglersArr.forEach((item, index, arr) => {
   const navToggler = new Toggler(item, arr, navTogglerConfig);
   navToggler.setEventListeners();
 });
+
+const contentExpandersArr = Array.from(document.querySelectorAll('.content__expander'));
+const contentExpanderConfig = {
+  togglerActiveClass: 'content__expander_active',
+  togglerHolderSel: '.content',
+  togglerTargetSel: '.content__expanded',
+  togglerTargetActiveClass: 'content__expanded_active',
+};
+contentExpandersArr.forEach((item, index, arr) => {
+  const contentExpander = new Toggler(item, arr, contentExpanderConfig);
+  contentExpander.setEventListeners();
+});

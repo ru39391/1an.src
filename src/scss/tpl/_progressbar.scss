@@ -1,0 +1,53 @@
+.progressbar {
+
+}
+
+.progressbar__row {
+  margin: 0 0 40px;
+  overflow: hidden;
+  border-radius: 100px;
+  background-color: rgba(143, 149, 172, .1);
+
+  @media (max-width:$breakpoint_md) {
+    margin: 0 0 20px;
+  }
+}
+
+.progressbar__runner {
+  @extend %d-flex-centered;
+  @include wh(0,40px);
+  @include fs-lh(16px,20/16);
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #fff;
+  border-radius: 0 100px 100px 0;
+  background-color: $color_black_light;
+  transition: all .8s ease .3s;
+}
+
+.progressbar__footer {
+  display: flex;
+  align-items: flex-start;
+}
+
+.progressbar__btn {
+  @include fw(180px);
+  height: 60px;
+  margin: 0 30px 0 0;
+
+  @media (max-width:$breakpoint_lg) {
+    margin: 0 24px 0 0;
+  }
+
+  @media (max-width:$breakpoint_md) {
+    @include px(16px);
+    @include fw(108px);
+    margin: 0 16px 0 0;
+  }
+}
+
+.progressbar__desc {
+  @include fs-lh(14px,18/14);
+  color: #000;
+}

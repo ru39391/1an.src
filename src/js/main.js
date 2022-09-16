@@ -1,4 +1,5 @@
 import '../scss/main.scss';
 
-import './app/nav';
 import './app/page';
+import './app/togglers';
+import './app/progressbar';

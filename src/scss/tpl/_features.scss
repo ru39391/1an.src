@@ -3,6 +3,10 @@
   grid-template-columns: repeat(5,1fr);
   grid-gap: 2*$grid_gutter;
 
+  @media (max-width:$breakpoint_lg) {
+    grid-gap: 24px;
+  }
+
   @media (max-width:$breakpoint_md) {
     grid-template-columns: repeat(3,1fr);
     grid-gap: 20px;

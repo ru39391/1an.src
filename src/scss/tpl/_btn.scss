@@ -6,7 +6,12 @@
   padding: 16px 40px;
   border-radius: 100px;
   color: #fff;
-  background-color: $color_red;
+  transition: all .3s ease;
+  background-color: $color_btn;
+
+  &:hover {
+    box-shadow: 0 10px 20px rgba(255, 45, 35, 0.3);
+  }
 
   @media (max-width:$breakpoint_lg) {
     @include fs-lh(14px,18/14);

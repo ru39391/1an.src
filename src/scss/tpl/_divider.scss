@@ -1,0 +1,31 @@
+.divider {
+  @extend %d-flex-wrap;
+  justify-content: space-between;
+}
+
+.divider__col {
+  &.divider__col_type_aside {
+    @include fw(100%/10*4);
+
+    @media (max-width:$breakpoint_md) {
+      @include fw(100%/10*5);
+    }
+
+    @media (max-width:$breakpoint_xs) {
+      @include fw(100%);
+      margin-bottom: 24px;
+    }
+  }
+
+  &.divider__col_type_content {
+    @include fw(100%/10*5);
+
+    @media (max-width:$breakpoint_md) {
+      @include fw(100%/10*4);
+    }
+
+    @media (max-width:$breakpoint_xs) {
+      @include fw(100%);
+    }
+  }
+}

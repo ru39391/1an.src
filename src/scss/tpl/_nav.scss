@@ -72,6 +72,7 @@
   @include fw(10px);
   @include wh(10px,8px);
   margin: 0 0 0 10px;
+  pointer-events: none;
   transition: all .3s ease;
 }
 
