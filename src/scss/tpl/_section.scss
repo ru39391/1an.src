@@ -1,0 +1,11 @@
+.section {
+  @include py(40px);
+
+  @media (max-width:$breakpoint_md) {
+    @include py(25px);
+  }
+
+  @media (max-width:$breakpoint_xs) {
+    @include py(20px);
+  }
+}
