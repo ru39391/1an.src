@@ -1,0 +1,71 @@
+.selecter {
+  position: relative;
+
+  &.selecter_active {
+    .selecter__arrow {
+      transform: rotateX(180deg);
+    }
+
+    .selecter__placeholder {
+      border-radius: 4px 4px 0 0;
+    }
+
+    .selecter__list {
+      display: block;
+    }
+  }
+}
+
+.selecter__placeholder {
+  @extend %btn-default;
+  @extend %d-flex-ai-center;
+  @include wh(100%,60px);
+  padding: 20px 24px;
+  text-align: left;
+  border-radius: 4px;
+  justify-content: space-between;
+  color: #fff;
+  background-color: $color_black_dark;
+  border: 1px solid rgba(143, 149, 172, .4);
+}
+
+.selecter__title {
+  @include fs-lh(14px,18/14);
+  margin: 0 10px 0 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+
+.selecter__arrow {
+  @include fw(10px);
+  @include wh(10px,8px);
+  pointer-events: none;
+  transition: all .3s ease;
+}
+
+.selecter__list {
+  @extend %d-flex-column;
+  @include border(0 1px 1px,rgba(143, 149, 172, .4));
+  @include pos(100%,0);
+  right: 0;
+  padding: 8px;
+  display: none;
+  border-radius: 0 0 4px 4px;
+  background-color: $color_black_dark;
+}
+
+.selecter__option {
+  @extend %btn-default;
+  @include offset(0 0 2px,8px 18px);
+  @include fs-lh(14px,18/14);
+  text-align: left;
+  color: #fff;
+  border-radius: 3px;
+  transition: all .3s ease;
+
+  &:hover {
+    background-color: rgba(143, 149, 172, .1);
+  }
+}

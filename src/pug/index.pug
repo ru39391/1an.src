@@ -1,5 +1,134 @@
 extends base
 
 block meta
-  - var pageClass = 'main-page';
   - var title = 'Главная';
+
+block promo
+  section.promo
+    .promo__wrapper.wrapper
+      .promo__col.promo__col_type_main
+        h1.promo__title Недвижимость
+          span.promo__title-inner Санкт-Петербурга
+          | и Москвы
+        form.form(action="#" method="post" id="promoform")
+          .form__item
+            label.form__label Выбрать город
+            select.form__select
+              option(disabled) Выбрать город
+              option Москва
+              option Санкт-Петербург
+              option Владивосток
+              option Оренбург
+          .form__item
+            label.form__label Ваш e-mail
+            input.form__field.form__field_theme_dark(type="email" value="" placeholder="info@mail.ru")
+          .form__item.form__item_width_wide
+            button.form__btn.btn(type="submit") Кнопка действия
+          .form__footer
+            input.form__toggler(type="checkbox" id="promoform__policy" checked)
+            label.form__label.form__label_type_toggler(for="promoform__policy")
+              span.form__toggler-holder.form__toggler-holder_type_checkbox
+                +icon('checked','form__toggler-icon')
+              span Отправляя нам данную форму вы соглашаетесь с
+                a.form__label-link(href="#") политикой конфиденциальности
+      .promo__col.promo__col_type_aside
+        +image('promo.png')
+
+block wrapper
+  section.section
+    .wrapper
+      h2.h1.section__title Обычный слайдер
+    .scroller
+      .wrapper.pos-rel
+        .scroller__wrapper
+          .scroller__slide
+            +image('content/slides/1.jpg')
+            .scroller__meta
+              .rating
+                .rating__item.rating__item_active
+                  +icon('star')
+                .rating__item.rating__item_active
+                  +icon('star')
+                .rating__item.rating__item_active
+                  +icon('star')
+                .rating__item
+                  +icon('star')
+                .rating__item
+                  +icon('star')
+          .scroller__slide
+            +image('content/slides/2.jpg')
+            .scroller__meta
+              .rating
+                .rating__item.rating__item_active
+                  +icon('star')
+                .rating__item
+                  +icon('star')
+                .rating__item
+                  +icon('star')
+                .rating__item
+                  +icon('star')
+                .rating__item
+                  +icon('star')
+          .scroller__slide
+            +image('content/slides/3.jpg')
+            .scroller__meta
+              .rating
+                .rating__item.rating__item_active
+                  +icon('star')
+                .rating__item.rating__item_active
+                  +icon('star')
+                .rating__item.rating__item_active
+                  +icon('star')
+                .rating__item.rating__item_active
+                  +icon('star')
+                .rating__item
+                  +icon('star')
+          .scroller__slide
+            +image('content/slides/1.jpg')
+            .scroller__meta
+              .rating
+                .rating__item
+                  +icon('star')
+                .rating__item
+                  +icon('star')
+                .rating__item
+                  +icon('star')
+                .rating__item
+                  +icon('star')
+                .rating__item
+                  +icon('star')
+        .scroller-nav
+          button.scroller-nav__btn.scroller-nav__btn_dir_prev(type="button")
+            +icon('arrow-left','scroller-nav__btn-icon')
+          button.scroller-nav__btn.scroller-nav__btn_dir_next(type="button")
+            +icon('arrow-right','scroller-nav__btn-icon')
+      .scroller-pagination.wrapper
+
+  .divider.section.wrapper
+    .divider__col.divider__col_type_aside
+      .progressbar
+        .progressbar__row
+          .progressbar__runner 15 %
+        .progressbar__footer
+          button.progressbar__btn.btn(type="button") + 25 %
+          .progressbar__desc При нажатии на кнопку прогрессбар заполняется на столько процентов, сколько указано на кнопке
+    .divider__col.divider__col_type_content
+      .content
+        .content__expanded
+          p Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака.
+          p Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака.
+          p Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака.
+          p Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака.
+          p Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака.
+        button.content__expander(type="button") Подробнее
+          +icon('arrow-down','content__expander-arrow')
+
+  .section.wrapper
+    #map.map
+
+  - var features = [{value:'3,000',title:'Агенств'},{value:'10,000',title:'Партнеров'},{value:'80,000',title:'Квартир в базе'},{value:'100+',title:'Застройщиков'},{value:'200',title:'Сотрудников'}]
+  .features.section.wrapper
+    each feature in features
+      .features__item
+        .features__item-value!= feature.value
+        .features__item-title!= feature.title

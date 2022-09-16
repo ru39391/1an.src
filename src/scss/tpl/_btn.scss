@@ -1,0 +1,20 @@
+.btn {
+  @extend %btn-default;
+  @include inline-block;
+  @include fs-lh(16px,20/16);
+  font-weight: bold;
+  padding: 16px 40px;
+  border-radius: 100px;
+  color: #fff;
+  transition: all .3s ease;
+  background-color: $color_btn;
+
+  &:hover {
+    box-shadow: 0 10px 20px rgba(255, 45, 35, 0.3);
+  }
+
+  @media (max-width:$breakpoint_lg) {
+    @include fs-lh(14px,18/14);
+    padding: 10px 32px;
+  }
+}

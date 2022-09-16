@@ -1,23 +1,35 @@
 @font-face {
-    font-family: 'Artegra Sans';
-    src: url('../fonts/ArtegraSans-Regular.eot');
-    src: local('Artegra Sans Regular'), local('ArtegraSans-Regular'),
-        url('../fonts/ArtegraSans-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/ArtegraSans-Regular.woff2') format('woff2'),
-        url('../fonts/ArtegraSans-Regular.woff') format('woff'),
-        url('../fonts/ArtegraSans-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Formular';
+  src: url('../fonts/Formular-Light.eot');
+  src: local('Formular Light'), local('Formular-Light'),
+      url('../fonts/Formular-Light.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Formular-Light.woff2') format('woff2'),
+      url('../fonts/Formular-Light.woff') format('woff'),
+      url('../fonts/Formular-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Artegra Sans';
-    src: url('../fonts/ArtegraSans-Bold.eot');
-    src: local('Artegra Sans Bold'), local('ArtegraSans-Bold'),
-        url('../fonts/ArtegraSans-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/ArtegraSans-Bold.woff2') format('woff2'),
-        url('../fonts/ArtegraSans-Bold.woff') format('woff'),
-        url('../fonts/ArtegraSans-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'Formular';
+  src: url('../fonts/Formular.eot');
+  src: local('Formular'),
+      url('../fonts/Formular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Formular.woff2') format('woff2'),
+      url('../fonts/Formular.woff') format('woff'),
+      url('../fonts/Formular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Formular';
+  src: url('../fonts/Formular-Bold.eot');
+  src: local('Formular Bold'), local('Formular-Bold'),
+      url('../fonts/Formular-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Formular-Bold.woff2') format('woff2'),
+      url('../fonts/Formular-Bold.woff') format('woff'),
+      url('../fonts/Formular-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }

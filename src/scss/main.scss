@@ -1,10 +1,4 @@
 @import '~bootstrap/scss/bootstrap-reboot.scss';
-@import '~bootstrap/scss/bootstrap-grid.scss';
-//@import '~bootstrap/scss/modal';
-@import '~bootstrap/scss/images';
-@import '~bootstrap/scss/utilities/text';
-//@import '~bootstrap/scss/utilities/embed';
-//@import '~bootstrap/scss/utilities/display';
 
 /* base */
 @import 'base/fonts';
@@ -13,10 +7,32 @@
 @import 'base/extends';
 @import 'base/common';
 
+@import 'base/bg';
+@import 'base/color';
+@import 'base/img';
+@import 'base/text';
+@import 'base/width';
+@import 'base/height';
+@import 'base/mixes';
+
 /* tpl */
 @import 'tpl/btn';
+@import 'tpl/nav';
+@import 'tpl/map';
+@import 'tpl/page';
+@import 'tpl/logo';
 @import 'tpl/form';
+@import 'tpl/promo';
 @import 'tpl/header';
+@import 'tpl/wrapper';
 @import 'tpl/footer';
-@import 'tpl/pathway';
+@import 'tpl/section';
+@import 'tpl/divider';
 @import 'tpl/content';
+@import 'tpl/features';
+@import 'tpl/scroller';
+@import 'tpl/selecter';
+@import 'tpl/rating';
+@import 'tpl/progressbar';
+@import 'tpl/contact-item';
+@import 'tpl/back-to-top';

@@ -1,7 +1,6 @@
 include libs/mixins
 
 block meta
-  - var pageClass = '';
   - var title = 'Базовый шаблон';
 
 doctype html
@@ -16,18 +15,22 @@ html(lang="ru")
 
     //- link(href="../img/favicon.ico" rel="shortcut icon")
 
-  body(class=pageClass)    
+  body.page
     block header
       include base/header.pug
 
-    block wrapper
-      section.wrapper
-        h1 #{title}
-        +icon('terminal-fill')
+    .page__wrapper
+      block promo
+
+      block wrapper
 
     block footer
       include base/footer.pug
 
-    script(src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js")
-    script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js")
-    script(src="https://unpkg.com/swiper@5.4.1/js/swiper.min.js")
+    template.selecter-template
+      .selecter
+        button.selecter__placeholder(type="button")
+          span.selecter__title
+          +icon('arrow-down','selecter__arrow')
+
+    script(src="https://api-maps.yandex.ru/2.1?apikey=cb485d6a-b2b8-4355-ba07-1baec5b10737&lang=ru_RU")

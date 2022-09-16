@@ -1,0 +1,21 @@
+.contact-item {
+  line-height: (18/14);
+
+  &.contact-item_type_phone {
+    @include fs-lh(25px,30/25);
+    font-weight: bold;
+
+    @media (max-width:$breakpoint_lg) {
+      @include fs-lh(20px,26/20);
+    }
+
+    @media (max-width:$breakpoint_sm) {
+      @include fs-lh(18px,22/18);
+    }
+  }
+
+  &.contact-item_type_email {
+    @include color($color_red);
+    text-decoration: underline;
+  }
+}

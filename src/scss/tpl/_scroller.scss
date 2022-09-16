@@ -1,0 +1,103 @@
+.scroller {
+  overflow: hidden;
+}
+
+.scroller__wrapper {
+  display: flex;
+  position: relative;
+  margin-bottom: 52px;
+  transition: all .3s ease;
+
+  @media (max-width:$breakpoint_lg) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width:$breakpoint_sm) {
+    margin-bottom: 32px;
+  }
+}
+
+.scroller__slide {
+  flex: 0 0 auto;
+  max-width: 100%;
+  margin: 0 2*$grid_gutter 0 0;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+
+  @media (max-width:$breakpoint_lg) {
+    margin-right: 24px;
+  }
+
+  @media (max-width:$breakpoint_sm) {
+    margin-right: 16px;
+  }
+}
+
+.scroller__meta {
+  @extend %d-flex-column;
+  @include pos(0,0);
+  @include wh(100%);
+  padding: 30px 42px;
+  justify-content: flex-end;
+  background: linear-gradient(360deg, rgba(24, 24, 30, 0.6) 0%, rgba(23, 24, 31, 0) 82.86%);
+}
+
+.scroller-nav__btn {
+  @extend %btn-default;
+  @extend %d-flex-column;
+  @extend %d-flex-centered;
+  @include wh(50px);
+  position: absolute;
+  top: 50%;
+  margin: -25px 0 0;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(143, 149, 172, 0.2);
+
+  &.scroller-nav__btn_dir_prev {
+    left: -($grid_gutter);
+
+    @media (max-width:$breakpoint_sm) {
+      left: 4px;
+    }
+  }
+
+  &.scroller-nav__btn_dir_next {
+    right: -($grid_gutter);
+
+    @media (max-width:$breakpoint_sm) {
+      right: 4px;
+    }
+  }
+}
+
+.scroller-nav__btn-icon {
+  @include fw(10px);
+  @include wh(10px,14px);
+  pointer-events: none;
+}
+
+.scroller-pagination {
+  text-align: center;
+}
+
+.scroller-pagination__item {
+  @extend %btn-default;
+  @include wh(8px);
+  @include inline-block;
+  margin: 0 16px 0 0;
+  border-radius: 50%;
+  opacity: .3;
+  background-color: $color_gray_light;
+  transition: all .3s ease;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.scroller-pagination__item_active {
+    opacity: 1;
+    background-color: $color_red;
+  }
+}

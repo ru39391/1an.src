@@ -1,0 +1,8 @@
+.page {
+  @extend %d-flex-column;
+  min-height: 100vh;
+}
+
+.page__wrapper {
+  flex-grow: 1;
+}

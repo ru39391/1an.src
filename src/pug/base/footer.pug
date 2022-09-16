@@ -1,1 +1,13 @@
 footer.footer
+  .footer__wrapper.wrapper
+    .footer__top
+      button.back-to-top(type="button" data-target="page")
+        | Наверх
+        span.back-to-top__arrow
+          +icon('arrow-top','back-to-top__icon')
+    .footer__col.footer__col_content_address
+      .contact-item Санкт-Петербург, Владимирский пр., д. 3 лит. А, офис 701
+    .footer__col.footer__col_content_phone
+      a.contact-item.contact-item_type_phone(href="tel:+78124456809") +7 (812) 445-68-09
+    .footer__col.footer__col_content_email
+      a.contact-item.contact-item_type_email(href="mailto:my.freelance.mailbox@gmail.com") Напишите нам
