@@ -1,0 +1,14 @@
+.rating {
+  @extend %d-flex-ai-center;
+}
+
+.rating__item {
+  @include fw(22px);
+  @include wh(22px);
+  margin: 0 8px 0 0;
+  color: #fff;
+
+  &.rating__item_active {
+    color: $color_red;
+  }
+}

@@ -31,49 +31,72 @@ block promo
 block wrapper
   section.section
     .wrapper
-      h2.section__title Обычный слайдер
-      .scroller
+      h2.h1.section__title Обычный слайдер
+    .scroller
+      .wrapper.pos-rel
         .scroller__wrapper
           .scroller__slide
+            +image('content/slides/1.jpg')
             .scroller__meta
               .rating
+                .rating__item.rating__item_active
+                  +icon('star')
+                .rating__item.rating__item_active
+                  +icon('star')
+                .rating__item.rating__item_active
+                  +icon('star')
                 .rating__item
+                  +icon('star')
                 .rating__item
-                .rating__item
-                .rating__item
-                .rating__item
+                  +icon('star')
           .scroller__slide
+            +image('content/slides/2.jpg')
             .scroller__meta
               .rating
+                .rating__item.rating__item_active
+                  +icon('star')
                 .rating__item
+                  +icon('star')
                 .rating__item
+                  +icon('star')
                 .rating__item
+                  +icon('star')
                 .rating__item
-                .rating__item
+                  +icon('star')
           .scroller__slide
+            +image('content/slides/3.jpg')
             .scroller__meta
               .rating
+                .rating__item.rating__item_active
+                  +icon('star')
+                .rating__item.rating__item_active
+                  +icon('star')
+                .rating__item.rating__item_active
+                  +icon('star')
+                .rating__item.rating__item_active
+                  +icon('star')
                 .rating__item
-                .rating__item
-                .rating__item
-                .rating__item
-                .rating__item
+                  +icon('star')
           .scroller__slide
+            +image('content/slides/1.jpg')
             .scroller__meta
               .rating
                 .rating__item
+                  +icon('star')
                 .rating__item
+                  +icon('star')
                 .rating__item
+                  +icon('star')
                 .rating__item
+                  +icon('star')
                 .rating__item
+                  +icon('star')
         .scroller-nav
           button.scroller-nav__btn.scroller-nav__btn_dir_prev(type="button")
+            +icon('arrow-left','scroller-nav__btn-icon')
           button.scroller-nav__btn.scroller-nav__btn_dir_next(type="button")
-        .scroller-pagination
-          button.scroller-pagination__item(type="button")
-          button.scroller-pagination__item(type="button")
-          button.scroller-pagination__item(type="button")
-          button.scroller-pagination__item(type="button")
+            +icon('arrow-right','scroller-nav__btn-icon')
+      .scroller-pagination.wrapper
 
   .divider.section.wrapper
     .divider__col.divider__col_type_aside

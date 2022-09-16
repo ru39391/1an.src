@@ -9,3 +9,16 @@
     @include py(20px);
   }
 }
+
+.section__title {
+  margin: 0 0 48px;
+  text-align: center;
+
+  @media (max-width:$breakpoint_lg) {
+    margin: 0 0 40px;
+  }
+
+  @media (max-width:$breakpoint_sm) {
+    margin: 0 0 32px;
+  }
+}
