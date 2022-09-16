@@ -1,0 +1,24 @@
+.back-to-top {
+  @extend %btn-default;
+  @extend %d-flex-ai-center;
+  color: $color_black_light;
+}
+
+.back-to-top__arrow {
+  @extend %d-flex-column;
+  @extend %d-flex-ai-center;
+  @include wh(30px);
+  @include fw(30px);
+  margin: 0 0 0 12px;
+  color: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  justify-content: center;
+  background-color: $color_black_light;
+}
+
+.back-to-top__icon {
+  @include fw(10px);
+  @include wh(10px,8px);
+  pointer-events: none;
+}
